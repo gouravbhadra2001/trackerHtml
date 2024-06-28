@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Counter App</title>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #message-container {
+      width: 80%;
+      max-width: 1200px;
+      margin-top: 20px;
+    }
+
+    #message-container div {
+      background-color: #CCC;
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+
+    #users-container {
+      margin-top: 20px;
+    }
+
+    #users-container div {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    #counters {
+      margin-top: 20px;
+    }
+
+    #counters div {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    #send-container {
+      position: fixed;
+      padding-bottom: 30px;
+      bottom: 0;
+      background-color: white;
+      max-width: 1200px;
+      width: 80%;
+      display: flex;
+    }
+
+    #message-input {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="message-container"></div>
+  <div id="users-container"></div>
+  <div id="counters">
+    <div>User 1 Counter: <span id="counter1">0</span></div>
+    <div>User 2 Counter: <span id="counter2">0</span></div>
+  </div>
+  <form id="send-container">
+    <button type="submit" id="increment-button">Increment</button>
+  </form>
+</body>
+</html>
